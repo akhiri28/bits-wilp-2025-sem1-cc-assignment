@@ -1,11 +1,11 @@
 # Project - Building a Secure, Automated Cloud Application Deployment Framework on AWS
 
 ## Folder Structure
-.github/workflows/   # CI/CD workflows
-src/                 # Source code
-Dockerfile           # Container build configuration
-requirements.txt     # Python dependencies
-rollback.sh          # Rollback in acse of failure.
+- .github/workflows/   # CI/CD workflows
+- src/                 # Source code
+- Dockerfile           # Container build configuration
+- requirements.txt     # Python dependencies
+- rollback.sh          # Rollback in acse of failure.
 
 
 
