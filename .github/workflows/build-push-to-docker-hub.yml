@@ -1,3 +1,5 @@
+
+
 name: Docker Build and Push to Docker Hub
 
 on:
@@ -21,6 +23,6 @@ jobs:
 
       - name: Run deployment script
         run: |
-          docker build -t $img_nm:latest .
-          docker tag $img_nm:latest ${{ secrets.DOCKER_PASSWORD }}/$img_nm:latest
-          docker push ${{ secrets.DOCKER_PASSWORD }}/$img_nm:latest 
+          docker build -t library-book-management:latest .
+          docker tag library-book-management:latest ${{ secrets.DOCKER_PASSWORD }}/library-book-management:latest
+          docker push ${{ secrets.DOCKER_PASSWORD }}/library-book-management:latest 
