@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Details{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">Books Details</h1>
+
+
+<table class="data-table">
+  <tbody>
+    <tr><th>Name</th><td>{{ book.book_name }}</td></tr>
+    <tr><th>Type</th><td>{{ book.book_type }}</td></tr>
+    <tr><th>Publisher</th><td>{{ book.publisher }}</td></tr>
+    <tr><th>Book ID</th><td>{{ book.id }}</td></tr>
+    <tr><th>Date Added</th><td>{{ book.date_added.strftime('%Y-%m-%d') if book.date_added else 'N/A' }}</td></tr>
+    <tr><th>Current Location</th><td>{{ book.location or '—' }}</td></tr>
+    <tr><th>Location in Library</th><td>{{ book.location_in_library or '—' }}</td></tr>
+    <tr><th>Status</th><td>{{ book.status | default('Unknown') }}</td></tr>
+  </tbody>
+</table>
+
+{% endblock %}

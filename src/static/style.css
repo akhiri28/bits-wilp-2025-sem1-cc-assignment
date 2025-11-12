@@ -1,0 +1,341 @@
+/* === Base Styles & Reset === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0 15px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* === Welcome Text & Header === */
+.welcome-text {
+  width: 100%;
+  max-width: 900px;
+  background-color: #f2f2f2;
+  padding: 10px 15px;
+  margin: 15px 0 20px 0;
+  font-weight: 600;
+  text-align: right;
+  border-radius: 4px;
+  user-select: none;
+}
+
+
+/* === Tables === */
+table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  text-align: left;
+  background-color: white;
+}
+
+th {
+  background-color: #eaeaea;
+  font-weight: 700;
+}
+
+/* === Lists === */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 900px;
+}
+
+li {
+  padding: 5px 0;
+}
+
+/* === Buttons === */
+button,
+input[type="submit"],
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn-primary:hover,
+button:focus,
+input[type="submit"]:focus,
+.btn-primary:focus {
+  background-color: #0056b3;
+  outline: none;
+  box-shadow: 0 6px 12px rgba(0,86,179,0.6);
+}
+
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping on small screens */
+  gap: 12px;             /* space between buttons */
+  align-items: center;   /* vertical alignment */
+}
+
+.inline-form {
+  margin: 0;             /* remove default form margin */
+  display: inline-block; /* keep form inline */
+}
+
+/* === Login Form === */
+.login-form {
+  background-color: white;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Form Groups & Labels */
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Form Inputs */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.07);
+}
+
+.form-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,123,255,0.5);
+}
+
+/* === Flash Messages === */
+.flash-messages {
+  margin-bottom: 15px;
+  max-width: 400px;
+}
+
+.flash-message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.flash-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1.5px solid #c3e6cb;
+}
+
+.flash-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1.5px solid #f5c6cb;
+}
+
+.flash-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1.5px solid #bee5eb;
+}
+
+/* === Register prompt paragraph === */
+.register-prompt {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+.register-prompt a {
+  font-weight: 600;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.register-prompt a:hover,
+.register-prompt a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* === Inventory Page Search/Filter/Sort Form === */
+.inventory-filter-form {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inventory-filter-form label {
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 0.3rem;
+  color: #333;
+}
+
+.inventory-filter-form input[type="text"],
+.inventory-filter-form select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  min-width: 160px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inventory-filter-form input[type="text"]:focus,
+.inventory-filter-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button in form */
+.inventory-filter-form input[type="submit"] {
+  padding: 10px 22px;
+  font-weight: 700;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+  min-width: 100px;
+}
+
+.inventory-filter-form input[type="submit"]:hover,
+.inventory-filter-form input[type="submit"]:focus {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.6);
+  outline: none;
+}
+
+/* Inventory table tweaks to match */
+.inventory-table {
+  max-width: 900px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inventory-table thead tr {
+  background-color: #eaeaea;
+}
+
+.inventory-table thead th {
+  font-weight: 700;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.inventory-table tbody tr {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.inventory-table tbody tr:hover {
+  background-color: #e9f5ff;
+}
+
+.inventory-table tbody td {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+}
+
+.inventory-table tbody td a {
+  color: #0645ad;
+  font-weight: 600;
+  text-decoration: none;
+  transition: text-decoration 0.25s ease;
+}
+
+.inventory-table tbody td a:hover,
+.inventory-table tbody td a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Responsive: stack filter form fields on small screens */
+@media (max-width: 600px) {
+  .inventory-filter-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .inventory-filter-form label {
+    margin-bottom: 0.2rem;
+  }
+
+  .inventory-filter-form input[type="text"],
+  .inventory-filter-form select,
+  .inventory-filter-form input[type="submit"] {
+    width: 100%;
+    min-width: auto;
+  }
+}
+

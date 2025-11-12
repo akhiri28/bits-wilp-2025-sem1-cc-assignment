@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+    <form method="POST" action="{{ url_for('register') }}">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=30) }}<br>
+            {% for error in form.username.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.first_name.label }}<br>
+            {{ form.first_name(size=30) }}<br>
+            {% for error in form.first_name.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.last_name.label }}<br>
+            {{ form.last_name(size=30) }}<br>
+            {% for error in form.last_name.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=30) }}<br>
+            {% for error in form.password.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.confirm_password.label }}<br>
+            {{ form.confirm_password(size=30) }}<br>
+            {% for error in form.confirm_password.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+
+        {% if form.role %}
+        <p>
+            {{ form.role.label }}<br>
+            {{ form.role() }}<br>
+            {% for error in form.role.errors %}
+                <span style="color:red;">{{ error }}</span><br>
+            {% endfor %}
+        </p>
+        {% endif %}
+
+        <p>{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}
